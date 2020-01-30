@@ -2,13 +2,6 @@ from model import *
 from data import *
 
 # Train with data generator
-# data_gen_args = dict(rotation_range=0.2,
-                    # width_shift_range=0.05,
-                    # height_shift_range=0.05,
-                    # shear_range=0.05,
-                    # zoom_range=0.05,
-                    # horizontal_flip=True,
-                    # fill_mode='nearest')
 data_gen_args = dict()
 myGene = trainGenerator(2,'data/inbreast/train','image','label',data_gen_args,save_to_dir = None) #batch size = 2 to 25 'data/inbreast/generator'
 model = unet()
